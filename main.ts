@@ -108,12 +108,10 @@ const getAccessToken = async (
 
 function removeMergeNotifs() {
 	//Add a setting for it and check if its enabled here
-	console.log("Calling this!");
 	const notices = document.querySelectorAll(".notice");
 	notices.forEach((notice) => {
 		if (notice.textContent?.includes("has been modified externally")) {
 			notice.remove();
-			console.log("A merge notice has been removed!");
 			return;
 		}
 	});
